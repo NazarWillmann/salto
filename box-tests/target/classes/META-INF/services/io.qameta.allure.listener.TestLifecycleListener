@@ -1,0 +1,2 @@
+#ooo.jtc.core.listeners.AllureTestListener #disabled for now as unnecessary
+ooo.jtc.core.listeners.SetTestStatus

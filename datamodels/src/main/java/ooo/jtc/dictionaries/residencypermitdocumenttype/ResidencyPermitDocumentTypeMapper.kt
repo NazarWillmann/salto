@@ -1,0 +1,7 @@
+package ooo.jtc.dictionaries.residencypermitdocumenttype
+
+import ooo.jtc.interfaces.AbstractDtoMapper
+import org.mapstruct.Mapper
+
+@Mapper
+interface ResidencyPermitDocumentTypeMapper : AbstractDtoMapper<ResidencyPermitDocumentType, ResidencyPermitDocumentTypeDto>

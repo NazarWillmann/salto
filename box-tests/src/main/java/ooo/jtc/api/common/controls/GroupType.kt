@@ -1,0 +1,33 @@
+package ooo.jtc.api.common.controls
+
+enum class GroupType(val id: String?, val cname: String? = null) {
+    ACCOUNT("GroupAccount"),
+    AGREEMENT("GroupAgreement"),
+    BANK_NAME("GroupBankName"),
+    BIC("GroupBic"),
+    BRANCH("GroupBranch"),
+    CODE("GroupCode"),
+    COMMON("GroupCommon"),
+    CONTACT_NAME("GroupContactName"),
+    CONTACT_PHONE("GroupContactPhone"),
+    CONTENT("GroupContent"),
+    CUSTOMER("GroupCustomer"),
+    CUSTOMERS("GroupCustomers"),
+    DESCRIPTION("GroupDescription"),
+    DOC_DATE("GroupDocumentDate"),
+    DOC_NUMBER("GroupDocumentNumber"),
+    DOC_TEXT("GroupDocText"),
+    DOC_THEME("GroupDocTheme"),
+    DOC_TYPE("GroupDocType"),
+    EXECUTION_MESSAGE("GroupExecutionMessage"),
+    FULL_NAME(null, "[[dictionary.bank.cpm.GroupFullName.name]]"),
+    IS_FOR_ALL_BRANCHES("GroupIsForAllBranches"),
+    MAIN("", "Main"),
+    NAME("GroupName"),
+    POST_PERIOD("GroupPostPeriod"),
+    PUBLICATION_TYPE("GroupPublicationType"),
+    RECEIVER_CUSTOMER("GroupReceiverCustomer"),
+    TARGET_TYPE("GroupTargetType"),
+    TOFK("GroupTofk"),
+    UTRA_ACCOUNT("GroupUtraAccount");
+}

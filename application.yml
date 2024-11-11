@@ -1,0 +1,168 @@
+#Properties deserialize to box-tests [ooo.jtc.core.ApplicationProperties]
+aliases:
+  dev_stand_host: &dev_stand_host "http://sandbox.jtc.ooo"
+  demo_stand_host: &demo_stand_host "http://salto-demo.jtc.ooo"
+  test_stand_host: &test_stand_host "http://salto-test.jtc.ooo"
+  default_api_port: &default_api_port 9100
+  default_ui_bank_port: &default_ui_bank_port 21400
+  default_ui_client_port: &default_ui_client_port 21430
+  default_db_port: &default_db_port 5432
+  crypto_plugin_stub_host: &crypto_plugin_stub_host "http://salto-test.jtc.ooo"
+  crypto_plugin_stub_port: &crypto_plugin_stub_port 10000
+
+testdata:
+  dir: ../testdata
+  strategy: fromDb
+
+server:
+  api:
+    port: *default_api_port
+  ui:
+    bank:
+      port: *default_ui_bank_port
+    client:
+      port: *default_ui_client_port
+
+db:
+  port: *default_db_port
+
+services:
+  oauth:
+    port: 9120
+    baseEndpoint: oauth
+  uaa:
+    port: 9100
+    baseEndpoint: uaa
+  uaaManagement:
+    port: 9100
+    baseEndpoint: uaa/management
+  dictionary:
+    port: 9100
+    baseEndpoint: dictionary
+  rkoDictionary:
+    port: 9100
+    baseEndpoint: ru-rko
+  rkoRupayment:
+    port: 9100
+    baseEndpoint: ru-rko/rupayment
+  rkoStatement:
+    port: 9100
+    baseEndpoint: ru-rko/statement
+  letter:
+    port: 9100
+    baseEndpoint: letter
+  sign:
+    port: 9100
+    baseEndpoint: sign
+  fsSystem:
+    port: 9100
+    baseEndpoint: fs-system
+  crypto:
+    port: 9100
+    baseEndpoint: crypto
+  news:
+    port: 9100
+    baseEndpoint: news
+  curRko:
+    port: 9100
+    baseEndpoint: cur-rko
+  salary:
+    port: 9100
+    baseEndpoint: salary
+  domainController:
+    port: 9100
+    baseEndpoint: domain-controller
+
+cryptoPluginStub:
+  host: *crypto_plugin_stub_host
+  port: *crypto_plugin_stub_port
+
+profile:
+  dev:
+    server:
+      api:
+        host: *dev_stand_host
+      ui:
+        bank:
+          host: *dev_stand_host
+        client:
+          host: *dev_stand_host
+    db:
+      host: "sandbox.jtc.ooo"
+      user: "SALTO_DEV"
+      password: "dwTcDfhvVrTtw*L*iYOgff"
+  demo:
+    server:
+      api:
+        host: *demo_stand_host
+      ui:
+        bank:
+          host: *demo_stand_host
+        client:
+          host: *demo_stand_host
+    db:
+      host: "salto-demo.jtc.ooo"
+      user: "salto_demo"
+      password: "salto_demo"
+  test:
+    server:
+      api:
+        host: *test_stand_host
+      ui:
+        bank:
+          host: *test_stand_host
+        client:
+          host: *test_stand_host
+    db:
+      host: "salto-test.jtc.ooo"
+      port: 15432
+      user: "salto_test"
+      password: "salto_test"
+
+ui:
+  proxy:
+    port: 60995
+    withProxy: false
+    host: localhost
+    ip: 127.0.0.1
+    authUse: false
+    authType: BASIC
+    domain: domain
+    user: user
+    password: password
+  browser: # used for selenoid
+    capabilities:
+      enableVNC: true
+      enableVideo: false
+      timeZone: "Europe/Moscow"
+  elements:
+    timeout: 4000
+    poolingInterval: 200
+    useJs: false
+
+tms:
+  host: https://jira.jtc.ooo/rest/atm/1.0
+  user: autotester_user
+  userId: JIRAUSER11101
+  password: Fsd9NLveb8ca
+  project: JTCSALTO
+  createTestCase: false
+  updateTestCase: false
+
+failedTestsFile: ../target/failedTests.txt
+maxRetry: 2
+i18nLocale: ru
+usersFilePath: "/AT_Users.json"
+
+selenide:
+  browser: chrome
+  savePageSource: false
+  startMaximized: true
+  downloadsFolder: "target/downloads"
+  clickViaJs: true
+  fileDownload: FOLDER
+  remote: http://atest:atestPass@stage.jtc.ooo:4445/wd/hub
+
+chromeoptions:
+  args: --safebrowsing-disable-download-protection #, --incognito
+  prefs: safebrowsing.enabled=true

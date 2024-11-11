@@ -1,0 +1,6 @@
+{
+  "args": ["--disable-infobars"],
+  "driver_path": "src\\main\\resources\\driver\\chromedriver.exe",
+  "acceptSslCerts": true
+
+}

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ooo.jtc.qa</groupId>
+    <artifactId>salto-autotest</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>box-tests</module>
+        <module>qa-core-api</module>
+        <module>qa-core-ui</module>
+        <module>qa-utils</module>
+        <module>datamodels</module>
+    </modules>
+
+    <properties>
+        <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+        <!-- Java 8 -->
+        <java.version>1.8</java.version>
+        <kotlin.version>1.4.0</kotlin.version>
+
+        <compiler.target.version>${java.version}</compiler.target.version>
+        <compiler.source.version>${java.version}</compiler.source.version>
+        <!-- Encoding -->
+        <default.encoding>UTF-8</default.encoding>
+        <project.build.sourceEncoding>${default.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${default.encoding}</project.reporting.outputEncoding>
+        <file.encoding>${default.encoding}</file.encoding>
+
+        <!--Modules -->
+        <qa-core-api.version>1.0-SNAPSHOT</qa-core-api.version>
+        <qa-core-ui.version>1.0-SNAPSHOT</qa-core-ui.version>
+        <qa-utils.version>1.0-SNAPSHOT</qa-utils.version>
+        <datamodels.version>1.0-SNAPSHOT</datamodels.version>
+
+        <!-- JTC-AT-Libs -->
+        <test-object-generator.version>1.0.2-SNAPSHOT</test-object-generator.version>
+
+        <!-- Plugins -->
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+        <allure-maven-plugin.version>2.10.0</allure-maven-plugin.version>
+
+        <!-- JUnit -->
+        <junit5.postfix>6.2</junit5.postfix>
+        <junit5.version>5.${junit5.postfix}</junit5.version>
+        <junit5.platform.version>1.${junit5.postfix}</junit5.platform.version>
+
+        <!--Logging -->
+        <log.level>info</log.level>
+        <log4j.skipJansi>false</log4j.skipJansi>
+
+        <allure.version>2.13.5</allure.version>
+        <rest-assured.version>4.2.0</rest-assured.version>
+        <jsonpath.version>2.6.0</jsonpath.version>
+        <jackson.version>2.10.3</jackson.version>
+        <aspectj.version>1.9.6</aspectj.version>
+        <log4j-slf4j-impl>2.13.3</log4j-slf4j-impl>
+        <poi-ooxml.version>3.17</poi-ooxml.version>
+        <pdfbox.version>2.0.20</pdfbox.version>
+        <jsoup.version>1.10.2</jsoup.version>
+        <snakeyaml>1.8</snakeyaml>
+        <commons-text.version>1.9</commons-text.version>
+
+        <serialization.version>0.14.0</serialization.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <postgresql.version>42.2.9</postgresql.version>
+        <jdbi3.version>3.12.0</jdbi3.version>
+        <HikariCP.version>3.4.1</HikariCP.version>
+        <reflections.version>0.9.12</reflections.version>
+        <generex.version>1.0.2</generex.version>
+        <mapstruct.version>1.3.1.Final</mapstruct.version>
+        <mapstruct-kotlin.version>1.3.1.1</mapstruct-kotlin.version>
+        <unitils.version>3.4.6</unitils.version>
+        <selenide.version>5.15.1</selenide.version>
+        <browsermob-core.version>2.1.5</browsermob-core.version>
+        <icu4j.version>68.2</icu4j.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit5.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pozo</groupId>
+            <artifactId>mapstruct-kotlin</artifactId>
+            <version>${mapstruct-kotlin.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                    <artifactId>kotlin-stdlib-jdk8</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j-slf4j-impl}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi-ooxml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>${pdfbox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>nexus-releases</id>
+            <url>https://nexus.jtc.ooo/repository/maven-public</url>
+        </repository>
+        <repository>
+            <id>maven-autotest-snapshot</id>
+            <url>https://nexus.jtc.ooo/repository/maven-autotest-snapshot</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>bintray</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <configuration>
+                    <jvmTarget>${java.version}</jvmTarget>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>src/main/java</sourceDir>
+                            </sourceDirs>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>kapt</id>
+                        <goals>
+                            <goal>kapt</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>src/main/java</sourceDir>
+                            </sourceDirs>
+                            <annotationProcessorPaths>
+                                <annotationProcessorPath>
+                                    <groupId>org.mapstruct</groupId>
+                                    <artifactId>mapstruct-processor</artifactId>
+                                    <version>${mapstruct.version}</version>
+                                </annotationProcessorPath>
+                                <annotationProcessorPath>
+                                    <groupId>com.github.pozo</groupId>
+                                    <artifactId>mapstruct-kotlin-processor</artifactId>
+                                    <version>${mapstruct-kotlin.version}</version>
+                                </annotationProcessorPath>
+                            </annotationProcessorPaths>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <proc>none</proc>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+                <executions>
+                    <!-- Replacing default-compile as it is treated specially by maven -->
+                    <execution>
+                        <id>default-compile</id>
+                        <phase>none</phase>
+                    </execution>
+                    <!-- Replacing default-testCompile as it is treated specially by maven -->
+                    <execution>
+                        <id>default-testCompile</id>
+                        <phase>none</phase>
+                    </execution>
+                    <execution>
+                        <id>java-compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>java-test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure-maven-plugin.version}</version>
+                <configuration>
+                    <resultsDirectory>allure-results</resultsDirectory>
+                    <reportDirectory>target/allure-report</reportDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

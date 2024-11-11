@@ -1,0 +1,11 @@
+{
+  "driver_path": "src\\main\\resources\\driver\\IEDriverServer.exe",
+  "acceptSslCerts": true,
+  "enablePersistentHover": false,
+  "nativeEvents": false,
+  "requireWindowFocus": true,
+  "ignoreProtectedModeSettings": true,
+  "ignoreZoomSetting": true,
+  "ie.ensureCleanSession": true,
+  "allowBlockedContent": true
+}

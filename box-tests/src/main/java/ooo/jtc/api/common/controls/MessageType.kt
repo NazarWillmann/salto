@@ -1,0 +1,32 @@
+package ooo.jtc.api.common.controls
+
+enum class MessageType(val message: String) {
+    BANK_NAME_REGEXP("[[cpm.CheckBankNameFormat.RegExp.CheckMessage]]"),
+    BRANCH_IN_DICTIONARY("[[cpm.BranchInDictionary.CheckMessage]]"),
+    BRANCH_NAME_EMPTY("[[cpm.BranchNameNotEmpty.CheckMessage]]"),
+    COMMON_ACCOUNT_NOT_FOUND("[[cpm.CheckCommon.AccountNotFound.CheckMessage]]"),
+    COMMON_BANK_BIC_NOT_FOUND("[[cpm.CheckCommon.BankBicNotFound.CheckMessage]]"),
+    COMMON_WRONG_ACCOUNT_STATUS("[[cpm.CheckCommon.WrongAccountStatus.CheckMessage]]"),
+    COMMON_WRONG_ACCOUNT_TYPE("[[cpm.CheckCommon.WrongAccountType.CheckMessage]]"),
+    COMMON_WRONG_BANK_NAME_FORMAT("[[cpm.CheckCommon.WrongBankNameFormat.CheckMessage]]"),
+    CONTENT_EMPTY("[[cpm.ContentNotEmpty.CheckMessage]]"),
+    CUSTOMER_IN_DICTIONARY("[[cpm.CustomerInDictionary.CheckMessage]]"),
+    CUSTOMER_NAME_EMPTY("[[cpm.CustomerNameNotEmpty.CheckMessage]]"),
+    CUSTOMER_NOT_BLOCKED("[[cpm.CustomerNotBlocked.CheckMessage]]"),
+    DOC_NUMBER_UNIQUE("[[cpm.DocNumberUniqueInYear.CheckMessage]]"),
+    DOC_TYPE_IN_DICTIONARY("[[cpm.DocTypeInDictionary.CheckMessage]]"),
+    EMPTY("[[cpm.field.empty]]"),
+    EMPTY_OR_SPACES("[[cpm.field.empty.or.spaces]]"),
+    LENGTH_FIXED("[[cpm.field.length.fixed]]"),
+    LENGTH_MAX("[[cpm.field.length.max]]"),
+    NAME_UNIQUE("[[cpm.CheckNameUnique.CheckMessage]]"),
+    OUT_OF_RANGE("[[cpm.field.between]]"),
+    STUB("Needs testing"),
+    SYMBOLS_ALLOWED_POSITION("[[cpm.field.symbols.allowed.position]]"),
+    SYMBOLS_DELETE("[[cpm.field.symbols.delete]]"),
+    SYMBOLS_SPACES("[[cpm.field.spaces]]"),
+    SYMBOLS_ZEROS("[[cpm.field.only.zeros]]"),
+    TARGET_TYPE_CUSTOMERS_EMPTY("[[cpm.ReceiverCustomersForAddressMailingNotEmpty.CheckMessage]]"),
+    TRANSFER_TERM_UNIQUE("[[cpm.TransferTermUnique.CheckMessage]]"),
+    UNIQUE_IN_YEAR("[[cpm.DocNumberUniqueInYear.CheckMessage]]");
+}

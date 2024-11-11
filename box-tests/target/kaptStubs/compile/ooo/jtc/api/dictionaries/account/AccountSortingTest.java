@@ -1,0 +1,18 @@
+package ooo.jtc.api.dictionaries.account;
+
+import java.lang.System;
+
+@kotlin.Metadata(mv = {1, 4, 0}, bv = {1, 0, 3}, k = 1, d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001B-\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0012\u0010\u0007\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\n0\t0\b\u0012\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\f\u00a2\u0006\u0002\u0010\r\u00a8\u0006\u000e"}, d2 = {"Looo/jtc/api/dictionaries/account/AccountSortingTest;", "Looo/jtc/api/common/templates/entity/SortingTestTemplate;", "Looo/jtc/dictionaries/account/AccountDto;", "Looo/jtc/testdata/dictionaries/account/AccountSortingParams;", "", "user", "Looo/jtc/uaa/User;", "sortRequestFunction", "Lkotlin/Function0;", "", "Looo/jtc/generic/pageparams/Sort;", "additionalFilter", "Looo/jtc/generic/pageparams/FilterData;", "(Looo/jtc/uaa/User;Lkotlin/jvm/functions/Function0;Looo/jtc/generic/pageparams/FilterData;)V", "box-tests"})
+@ooo.jtc.core.tm4j.LowPriority()
+@ooo.jtc.core.tm4j.ComponentDictionary()
+@AccountFolderSorting()
+@AccountTaskIdsCommon()
+public final class AccountSortingTest extends ooo.jtc.api.common.templates.entity.SortingTestTemplate<ooo.jtc.dictionaries.account.AccountDto, ooo.jtc.testdata.dictionaries.account.AccountSortingParams, java.lang.Object> {
+    
+    public AccountSortingTest(@org.jetbrains.annotations.NotNull()
+    ooo.jtc.uaa.User user, @org.jetbrains.annotations.NotNull()
+    kotlin.jvm.functions.Function0<? extends java.util.List<ooo.jtc.generic.pageparams.Sort>> sortRequestFunction, @org.jetbrains.annotations.Nullable()
+    ooo.jtc.generic.pageparams.FilterData additionalFilter) {
+        super(null, null, null, null, 0, null, null);
+    }
+}

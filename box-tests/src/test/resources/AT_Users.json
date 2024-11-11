@@ -1,0 +1,114 @@
+{
+  "client_AT": {
+    "password": "$2a$10$Adp/sfEaW1mcyP67.IjVNunWeiRcaVcogBjrNfXmS49119tK3xlea",
+    "catalog": "client",
+    "scopes": [
+      "SALTO:CUSTOMER_USER",
+      "openid",
+      "profile"
+    ],
+    "userDetails": {
+      "firstName": "Элеонора",
+      "middleName": "Леонидовна",
+      "lastName": "Питерская Ат",
+      "phoneNumber": "+79359624397",
+      "email": "client_at@at_jtc.ooo"
+    }
+  },
+  "client_second_AT": {
+    "password": "$2a$10$Adp/sfEaW1mcyP67.IjVNunWeiRcaVcogBjrNfXmS49119tK3xlea",
+    "catalog": "client",
+    "scopes": [
+      "SALTO:CUSTOMER_USER",
+      "openid",
+      "profile"
+    ],
+    "userDetails": {
+      "firstName": "Кибо",
+      "middleName": "Святославович",
+      "lastName": "Аркадьев Ат",
+      "phoneNumber": "+79843917968",
+      "email": "client_second_at@at_jtc.ooo"
+    }
+  },
+  "operator_AT": {
+    "password": "$2a$10$YP/yL/Iyw726gHJDfVGBnejuS9axbGGYOxbcBhR2I30M/s0r7UT7e",
+    "catalog": "bank",
+    "scopes": [
+      "SALTO:BANK_USER",
+      "openid",
+      "profile"
+    ],
+    "userDetails": {
+      "firstName": "Констанца",
+      "middleName": "Петровна",
+      "lastName": "Железная Ат",
+      "phoneNumber": "+79689142925",
+      "email": "operator_at@at_jtc.ooo"
+    }
+  },
+  "super_operator_AT": {
+    "password": "$2a$10$YP/yL/Iyw726gHJDfVGBnejuS9axbGGYOxbcBhR2I30M/s0r7UT7e",
+    "catalog": "bank",
+    "scopes": [
+      "SALTO:BANK_USER",
+      "openid",
+      "profile"
+    ],
+    "userDetails": {
+      "firstName": "Аристарх",
+      "middleName": "Вячеславович",
+      "lastName": "Барсов Ат",
+      "phoneNumber": "+79003546916",
+      "email": "super_operator_at@at_jtc.ooo"
+    }
+  },
+  "admin_AT": {
+    "password": "$2a$10$YP/yL/Iyw726gHJDfVGBnejuS9axbGGYOxbcBhR2I30M/s0r7UT7e",
+    "catalog": "bank",
+    "scopes": [
+      "SALTO:BANK_ADMIN",
+      "openid",
+      "profile"
+    ],
+    "userDetails": {
+      "firstName": "Алимак",
+      "middleName": "Данилович",
+      "lastName": "Руденко Ат",
+      "phoneNumber": "+79433568963",
+      "email": "admin_at@at_jtc.ooo"
+    }
+  },
+  "security_AT": {
+    "password": "$2a$10$YP/yL/Iyw726gHJDfVGBnejuS9axbGGYOxbcBhR2I30M/s0r7UT7e",
+    "catalog": "bank",
+    "scopes": [
+      "SALTO:BANK_SECURITY_ADMIN",
+      "openid",
+      "profile"
+    ],
+    "userDetails": {
+      "firstName": "Кейрон",
+      "middleName": "Леонидович",
+      "lastName": "Прокофьев Ат",
+      "phoneNumber": "+79777167037",
+      "email": "security_at@at_jtc.ooo"
+    }
+  },
+  "individual_AT": {
+    "password": "$2a$10$YP/yL/Iyw726gHJDfVGBnejuS9axbGGYOxbcBhR2I30M/s0r7UT7e",
+    "catalog": "client",
+    "scopes": [
+      "SALTO:INDIVIDUAL_USER",
+      "openid",
+      "profile"
+    ],
+    "userDetails": {
+      "firstName": "Герман",
+      "middleName": "Артёмович",
+      "lastName": "Козлов Ат",
+      "phoneNumber": "+79359624395",
+      "email": "individual_AT@at_jtc.ooo"
+    }
+  }
+}

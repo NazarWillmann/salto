@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>salto-autotest</artifactId>
+        <groupId>ooo.jtc.qa</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>datamodels</artifactId>
+    <version>${datamodels.version}</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>ooo.jtc.qa</groupId>
+            <artifactId>qa-utils</artifactId>
+            <version>${qa-utils.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>kotlin-stdlib</artifactId>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>ooo.jtc</groupId>
+            <artifactId>test-object-generator</artifactId>
+            <version>${test-object-generator.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>qa-utils</artifactId>
+                    <groupId>ooo.jtc</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+    </dependencies>
+
+</project>

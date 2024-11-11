@@ -1,0 +1,8 @@
+<aspectj>
+    <weaver options="-Xset:weaveJavaxPackages=true"/>
+    <aspects>
+        <aspect name="ooo.jtc.aspectj.AssertSteps"/>
+        <aspect name="ooo.jtc.aspectj.AllureTestInfoCollector"/>
+        <aspect name="ooo.jtc.aspectj.GenerexRandomControl"/>
+    </aspects>
+</aspectj>
